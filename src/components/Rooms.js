@@ -13,7 +13,7 @@ function Rooms() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("http://localhost:5000/api/rooms/getallrooms")
+        await axios.get("https://oyorent.herokuapp.com/api/rooms/getallrooms")
       ).data;
       setrooms(data);
       setloading(false);

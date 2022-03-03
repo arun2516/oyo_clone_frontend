@@ -46,7 +46,7 @@ export const MyOrders = () => {
     try {
       setloading(true);
       const data = await (
-        await axios.post("http://localhost:5000/api/bookings/getuserbookings", {
+        await axios.post("https://oyorent.herokuapp.com/api/bookings/getuserbookings", {
           userid: JSON.parse(localStorage.getItem("currentUser"))._id,
         })
       ).data;
@@ -61,7 +61,7 @@ export const MyOrders = () => {
   async function cancelBooking(bookingid, roomid) {
     try {
       setloading(true);
-      const result = await axios.post("http://localhost:5000/api/bookings/cancelbooking", {
+      const result = await axios.post("https://oyorent.herokuapp.com/api/bookings/cancelbooking", {
         bookingid: bookingid,
         userid: user._id,
         roomid: roomid,

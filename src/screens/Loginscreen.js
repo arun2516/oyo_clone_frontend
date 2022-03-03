@@ -27,7 +27,7 @@ export default function Loginscreen() {
     };
     try {
       setloading(true);
-      const result = await (await axios.post("http://localhost:5000/api/users/login", user)).data;
+      const result = await (await axios.post("https://oyorent.herokuapp.com/api/users/login", user)).data;
       localStorage.setItem("currentUser", JSON.stringify(result))
       if(result.isAdmin){
         window.location.href = "/admin"

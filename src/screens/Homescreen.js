@@ -64,7 +64,7 @@ function Homescreen() {
   useEffect(async () => {
     try {
       setloading(true);
-      const rooms = await (await axios.get("http://localhost:5000/api/rooms/getallrooms")).data;
+      const rooms = await (await axios.get("https://oyorent.herokuapp.com/api/rooms/getallrooms")).data;
       console.log(rooms);
       sethotels(rooms);
       setduplicatehotes(rooms)

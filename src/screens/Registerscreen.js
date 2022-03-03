@@ -29,7 +29,7 @@ export default function Registerscreen() {
           
           try {
             setloading(true)
-            const result = await axios.post('http://localhost:5000/api/users/register',user)
+            const result = await axios.post('https://oyorent.herokuapp.com/api/users/register',user)
             setloading(false)
             setsuccess(true)
             setemail('')

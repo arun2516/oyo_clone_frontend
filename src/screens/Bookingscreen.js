@@ -25,7 +25,7 @@ function Bookingscreen({ match }) {
     try {
       setloading(true);
       const data = await (
-        await axios.post("http://localhost:5000/api/rooms/getroombyid", { roomid })
+        await axios.post("https://oyorent.herokuapp.com/api/rooms/getroombyid", { roomid })
       ).data;
       console.log(data);
       setroom(data);
@@ -51,7 +51,7 @@ function Bookingscreen({ match }) {
 
     try {
       setloading(true);
-      const result = await axios.post("http://localhost:5000/api/bookings/bookroom", bookingDetails);
+      const result = await axios.post("https://oyorent.herokuapp.com/api/bookings/bookroom", bookingDetails);
       setloading(false);
       Swal.fire(
         "Congrats",

@@ -18,7 +18,7 @@ function Addroom() {
           rentperday, maxcount ,description ,phonenumber ,type ,image1 ,image2 ,image3
       }
       try {
-          const result = await axios.post('http://localhost:5000/api/rooms/addroom' , roomobj)
+          const result = await axios.post('https://oyorent.herokuapp.com/api/rooms/addroom' , roomobj)
       } catch (error) {
           
       }

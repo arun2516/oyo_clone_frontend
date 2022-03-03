@@ -13,7 +13,7 @@ function Bookings() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("http://localhost:5000/api/bookings/getallbookings")
+        await axios.get("https://oyorent.herokuapp.com/api/bookings/getallbookings")
       ).data;
       setbookings(data);
       setloading(false);
