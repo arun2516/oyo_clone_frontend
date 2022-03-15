@@ -57,7 +57,7 @@ export default function Loginscreen() {
             <input
               required
               type="text"
-              placeholder="Email:(arun25@gmail.com)"
+              placeholder="Email:"
               className="form-control mt-1"
               value={email}
               onChange={(e) => {
@@ -66,7 +66,7 @@ export default function Loginscreen() {
             />
             <input
               type="text"
-              placeholder="Password:(1234567890)"
+              placeholder="Password:"
               className="form-control mt-1"
               value={password}
               required
@@ -74,6 +74,13 @@ export default function Loginscreen() {
                 setpassword(e.target.value);
               }}
             />
+            <div>
+        <h1 style={{textAlign: 'center',marginTop:"3%"}}>
+          User Credential
+        </h1>
+        <h5 style={{textAlign: 'center'}}>Email: arun25@gmail.com</h5>
+        <h5 style={{textAlign: 'center', marginRight:"4%"}}>Password: 1234567890</h5>
+      </div>
 
             <button
               onClick={login}
